@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="js/auth.js"></script>
+    <title>PetSocial - Crear Cuenta</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Crear cuenta</h1>
+
+    <form id="registerForm">
+        <div>
+            <label>Nombre</label>
+            <input type="text" id="regUser" placeholder="ej: Sebastian Carbonetti">
+            <p class="error" id="errUser"></p>
+        </div>
+
+        <div>
+            <label>Correo</label>
+            <input type="email" id="regEmail" placeholder="mascota123@gmail.com">
+            <p class="error" id="errEmail"></p>
+        </div>
+
+        <div class="password-wrapper">
+            <label>Contraseña</label>
+            <input type="password" id="regPass" placeholder="******">
+            <button type="button" class="toggle-pass" onclick="togglePassword('regPass', this)">🔐​</button>
+        </div>
+        <p class="error" id="errPass"></p>
+
+        <div>
+            <label>Conf. Contraseña</label>
+            <input type="password" id="regPass2" placeholder="******">
+            <button type="button" class="toggle-pass" onclick="togglePassword('regPass2', this)">🔐​</button>
+        </div>
+        <p class="error" id="errPass2"></p>
+
+        <button type="submit">Crear cuenta</button>
+
+        <div class="small-link">
+            ¿Ya tenés cuenta? <a href="login.html">Iniciar sesión</a>
+        </div>
+
+        <p class="success" id="regSuccess"></p>
+    </form>
+
+</div>
+
+</body>
+</html>

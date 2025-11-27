@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const session = JSON.parse(localStorage.getItem("sessionUser"));
+
+            if (!session) location.href = "login.html";
+
+            document.getElementById("username").textContent = session.username;
+        });
+
+        function logout() {
+            localStorage.removeItem("sessionUser");
+            location.href = "login.html";
+        }
+    </script>
+    <title>PetSocial - Dashboard</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bienvenido, <span id="username"></span> 🐶</h1>
+    <button onclick="logout()">Cerrar sesión</button>
+</div>
+
+</body>
+</html>

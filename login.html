@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="js/auth.js"></script>
+    <title>PetSocial - Iniciar sesión</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Iniciar sesión</h1>
+
+    <form id="loginForm">
+        <input type="text" id="logUser" placeholder="Usuario o correo">
+        <p class="error" id="errLoginUser"></p>
+
+        <div class="password-wrapper">
+            <input type="password" id="logPass" placeholder="Contraseña">
+            <button type="button" class="toggle-pass" onclick="togglePassword('logPass', this)">🔐​</button>
+        </div>
+        <p class="error" id="errLoginPass"></p>
+
+        <button type="submit">Ingresar</button>
+
+        <div class="small-link">
+            ¿No tenés cuenta? <a href="register.html">Crear cuenta</a>
+        </div>
+
+        <p class="error" id="loginError"></p>
+    </form>
+</div>
+
+</body>
+</html>
