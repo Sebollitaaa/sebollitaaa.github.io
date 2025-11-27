@@ -1,13 +1,12 @@
-/* FONDO DIFUMINADO DEL COLLAGE */
 body {
     background-color: var(--gray-light);
+    padding: 40px 20px;
     display: flex;
-    justify-content: center;   /* Centra en eje X */
-    align-items: center;       /* Centra en eje Y */
-    height: 100vh;             /* Ocupa toda la ventana */
-    padding: 0;
-
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
 }
+
 
 body::before {
     content: "";
@@ -52,20 +51,11 @@ body::after {
     --gray-border: #ccc;
 }
 
-/*  CONTENEDORES  */
-body {
-    background-color: var(--gray-light);
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-}
-
 .container {
     background: #fff;
     padding: 30px;
-    width: 50%;                /* Siempre el 40% de la página */
-    min-width: 320px;          /* Preventivo para pantallas chicas */
-    max-width: 500px;          /* Para que no se vuelva gigante en pantallas grandes */
+    width: 50%;
+    max-width: 500px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     text-align: center;
